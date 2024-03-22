@@ -22,3 +22,27 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Build files
+build/
+dist/
+
+# Cache and log files
+.cache/
+.eslintcache
+yarn-error.log
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# Miscellaneous
+.DS_Store
+
