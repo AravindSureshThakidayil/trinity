@@ -5,6 +5,8 @@ import SignIn from "./components/Sign-in/Sign-in";
 import SignUp from "./components/Sign-Up/Sign-up";
 import Lend from "./components/Lend/Lend";
 import LendDetails from "./components/LendDetails/LendDetails";
+import Borrow from "./components/Borrow/Borrow";
+import BorrowDetais from "./components/BorrowDetails/BorrowDetails";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="signUp" element={<SignUp />} />
         <Route path="lend" element={<Lend />} />
         <Route path="lendDetails" element={<LendDetails />} />
+        <Route path="borrow" element={<Borrow />} />
+        <Route path="borrowDetails" element={<BorrowDetais />} />
       </Routes>
     </BrowserRouter>
   );
