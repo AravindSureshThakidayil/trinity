@@ -1,5 +1,6 @@
 import Header from "../Header/Header";
 import imagesrc from "./landing.png";
+import "./landing.css";
 
 function Landing() {
   return (
@@ -15,8 +16,8 @@ function Landing() {
             tempor vel. Quisque malesuada, velit a fringilla gravida, mauris leo
             fermentum dolor, nec.
           </div>
-          <img src={imagesrc} alt="image" />
         </div>
+        <img src={imagesrc} alt="image" />
       </main>
     </>
   );
