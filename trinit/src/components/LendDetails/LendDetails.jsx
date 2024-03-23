@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./lendDetails.css";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 function LendDetails() {
   const [documents, setDocuments] = useState([]);
@@ -8,10 +9,10 @@ function LendDetails() {
   const fetchDocuments = async () => {
     try {
       const snapshot = collection(firestore, "/users");
-      const documentsData = snapshot.docs.map(doc => doc.data());
+      const documentsData = snapshot.docs.map((doc) => doc.data());
       setDocuments(documentsData);
     } catch (error) {
-      console.error('Error fetching documents: ', error);
+      console.error("Error fetching documents: ", error);
     }
   };
 
@@ -46,7 +47,9 @@ function LendDetails() {
           </div>
         </div>
       </div>
-      <button class="green-button">Lend money</button>
+      <button class="green-button">
+        <Link to="/pay1">Lend Money</Link>
+      </button>
     </>
   );
 }
