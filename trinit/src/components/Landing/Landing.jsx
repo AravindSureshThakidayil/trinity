@@ -1,8 +1,27 @@
 import Header from "../Header/Header";
 import imagesrc from "./landing.png";
+import React, { useEffect, useState } from 'react';
 import "./landing.css";
+import {collection, getFirestore} from "firebase/firestore";
+import "firebase/app";
+import "firebase/firestore";
+import { firestore } from "../../../database";
 
 function Landing() {
+  const [documents, setDocuments] = useState([]);
+
+  const fetchDocuments = async () => {
+    try {
+      const snapshot = collection(firestore, "/users");
+      const documentsData = snapshot.docs.map(doc => doc.data());
+      setDocuments(documentsData);
+    } catch (error) {
+      console.error('Error fetching documents: ', error);
+    }
+  };
+
+  fetchDocuments();
+
   return (
     <>
       <Header />
@@ -10,11 +29,11 @@ function Landing() {
         <div className="some-thing">
           <div className="Heading">Microloans at your fingertips</div>
           <div className="body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            vestibul ante vitae risus laoreet, id interdum sapien fermentum.
-            Nulla facilisi. Phasellus lobortis vehicula arcu, id viverra ligula
-            tempor vel. Quisque malesuada, velit a fringilla gravida, mauris leo
-            fermentum dolor, nec.
+            <ul>
+            {documents.map((document, index) => (
+              <li key={index}>{document.name}</li>
+              ))}
+            </ul>
           </div>
         </div>
         <img src={imagesrc} alt="image" />
