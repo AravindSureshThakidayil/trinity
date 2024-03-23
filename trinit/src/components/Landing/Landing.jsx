@@ -8,20 +8,6 @@ import "firebase/firestore";
 import { firestore } from "../../../database";
 
 function Landing() {
-  const [documents, setDocuments] = useState([]);
-
-  const fetchDocuments = async () => {
-    try {
-      const snapshot = collection(firestore, "/users");
-      const documentsData = snapshot.docs.map(doc => doc.data());
-      setDocuments(documentsData);
-    } catch (error) {
-      console.error('Error fetching documents: ', error);
-    }
-  };
-
-  fetchDocuments();
-
   return (
     <>
       <Header />
@@ -29,11 +15,11 @@ function Landing() {
         <div className="some-thing">
           <div className="Heading">Microloans at your fingertips</div>
           <div className="body">
-            <ul>
-            {documents.map((document, index) => (
-              <li key={index}>{document.name}</li>
-              ))}
-            </ul>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>
         <img src={imagesrc} alt="image" />

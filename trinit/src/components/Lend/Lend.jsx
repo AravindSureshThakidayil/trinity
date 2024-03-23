@@ -1,49 +1,54 @@
 import "./lend.css";
+import { useState } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
 import Header from "../Header/Header";
 import { firestore } from "../../../database";
+import { Link } from "react-router-dom";
 
 function Lend() {
-  const [documents, setDocuments] = useState([]);
+  // const [techList, setTechList] = useState([]);
+  // const q = query(collection(firestore, "cities"), where("capital", "==", true));
 
-  const fetchDocuments = async () => {
-    try {
-      const snapshot = collection(firestore, "/users");
-      const documentsData = snapshot.docs.map(doc => doc.data());
-      setDocuments(documentsData);
-    } catch (error) {
-      console.error('Error fetching documents: ', error);
-    }
-  };
+  // const getDocs = async () => {
+  //   var docs = await getDocs(q);
+  //   var loans = [];
 
-  fetchDocuments();
+  //   documents.forEach(document => {
+  //     loans.push(document.data())
+  //   });
 
+  //   return loans;
+  // }
+  // const loans = getDocs();
+  
   return (
     <>
-      <Header />
+      {/* <Header />
       <div className="headinglending">Lending</div>
       <div className="subheadinglending">Live requests</div>
 
-      {documents.map((document, index) => (
+      {loans.map((document, index) => (
               <div className="glassbarslending">
                 <div className="glassbarlending">
-                  <div className="money">Rs. {document.amount}</div>
+                  <div className="money">Rs. {document.data().amount}</div>
                   <div className="date-and-name">
-                    <div className="date">Date: {document.date}</div>
-                    <div className="name">Name: {document.buyer}</div>
+                    <div className="date">Date: {document.data().date}</div>
+                    <div className="name">Name: {document.data().buyer}</div>
                     <div className="bar-and-score">
                       <div className="bar"></div>
                       <div className="score">88/100</div>
                     </div>
                     <div className="time-and-more">
                       <div className="time">5 sec ago</div>
-                      <div className="more">Details</div>
+                      <div className="more"><Link to="/lendDetails">Details</Link></div>
                     </div>
                   </div>
                 </div>
               </div>
       ))}
-  </>);
-      {/* <div className="glassbarslending">
+
+  </>); */}
+      <div className="glassbarslending">
         <div className="glassbarlending">
           <div className="money">Rs. 1000</div>
           <div className="date-and-name">
@@ -52,11 +57,11 @@ function Lend() {
           </div>
           <div className="bar-and-score">
             <div className="bar"></div>
-            <div className="score"></div>
+            <div className="score">88/100</div>
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
 
@@ -72,7 +77,7 @@ function Lend() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
 
@@ -88,7 +93,7 @@ function Lend() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
 
@@ -104,7 +109,7 @@ function Lend() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
 
@@ -120,7 +125,7 @@ function Lend() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
 
@@ -136,11 +141,11 @@ function Lend() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/lendDetails">Details</Link></div>
           </div>
         </div>
       </div>
-    </> */}
-}
+    </>
+)}
 
 export default Lend;
