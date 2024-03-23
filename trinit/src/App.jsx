@@ -8,6 +8,7 @@ import LendDetails from "./components/LendDetails/LendDetails";
 import Borrow from "./components/Borrow/Borrow";
 import BorrowDetais from "./components/BorrowDetails/BorrowDetails";
 import Pay2 from "./components/Pay2/Pay2";
+import Success from "./components/Success/Success";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="borrow" element={<Borrow />} />
         <Route path="borrowDetails" element={<BorrowDetais />} />
         <Route path="pay2" element={<Pay2 />} />
+        <Route path="success" element={<Success />} />
       </Routes>
     </BrowserRouter>
   );
