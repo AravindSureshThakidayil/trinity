@@ -1,13 +1,4 @@
-.blue-bar {
-  background-color: #120675;
-  width: 100%;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo-1 {
+.logo {
   color: #ff7a00;
   text-align: left;
   font-family: "Montserrat Alternates";
@@ -16,24 +7,17 @@
   font-weight: 800;
   line-height: normal;
   padding: 15px 0 0 40px;
+  margin: 50px auto 50px;
 }
 
-.tabs {
-  width: 575px;
-  justify-content: space-between;
-  align-items: center;
+main {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.tab {
-  color: #fff;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.button {
+button {
   border-radius: 9px;
   border: 6px solid #ef7300;
   background: #ff7a00;
@@ -49,10 +33,20 @@
   margin-right: 20px;
 }
 
-button:hover {
-  cursor: pointer;
+.password-input {
+  margin-bottom: 30px;
 }
 
-.profile img {
-  width: 70px;
+.heading {
+  color: #000;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.new-acc {
+  margin-top: 10px;
 }

@@ -1,0 +1,89 @@
+.headinglending {
+  color: #000;
+  text-align: center;
+  font-family: Georgia;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subheadinglending {
+  color: #000;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 39.555px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 200px;
+}
+
+.glassbarslending {
+  display: block;
+}
+
+.glassbarlending {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  background-color: beige;
+  height: 100px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+  margin: 20px auto;
+}
+
+.money {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Roboto;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.date-and-time {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Roboto;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.bar {
+  height: 30%;
+  width: 300px;
+  background-color: green;
+}
+
+.score {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.time {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Roboto;
+  font-size: 14.215px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.more {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Roboto;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
