@@ -23,7 +23,7 @@ function Lend() {
   
   return (
     <>
-      {/* <Header />
+      {<Header />/*
       <div className="headinglending">Lending</div>
       <div className="subheadinglending">Live requests</div>
 
