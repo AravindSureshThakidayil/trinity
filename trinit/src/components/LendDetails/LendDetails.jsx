@@ -48,7 +48,7 @@ function LendDetails() {
         </div>
       </div>
       <button class="green-button">
-        <Link to="/pay1">Lend Money</Link>
+        <Link to="/pay2">Lend money</Link>
       </button>
     </>
   );
