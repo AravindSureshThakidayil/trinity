@@ -1,0 +1,21 @@
+.heading-pay2 {
+  color: #ff7a00;
+  text-align: center;
+  font-family: "Montserrat Alternates";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.inputvalues {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+select,
+input-rect {
+  border: 2px solid #000;
+}
