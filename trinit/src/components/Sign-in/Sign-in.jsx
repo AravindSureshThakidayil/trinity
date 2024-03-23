@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "./sign-in.css";
 import { useState } from "react";
-import "../../../database.js";
+import { auth } from "../../../database";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
   const [isLogged, setIsLogged] = useState(false);
-  // var email, password;
-  const auth = getAuth();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -38,6 +38,7 @@ function SignIn() {
             signInWithEmailAndPassword(auth, email, password)
               .then((userCredential) => {
                 const user = userCredential.user;
+                navigate('/lend');
               })
               .catch((error) => {
                 const errorCode = error.code;

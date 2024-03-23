@@ -2,6 +2,20 @@ import "./lendDetails.css";
 import Header from "../Header/Header";
 
 function LendDetails() {
+  const [documents, setDocuments] = useState([]);
+
+  const fetchDocuments = async () => {
+    try {
+      const snapshot = collection(firestore, "/users");
+      const documentsData = snapshot.docs.map(doc => doc.data());
+      setDocuments(documentsData);
+    } catch (error) {
+      console.error('Error fetching documents: ', error);
+    }
+  };
+
+  fetchDocuments();
+
   return (
     <>
       <Header />
