@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./lendDetails.css";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 function LendDetails() {
   const [documents, setDocuments] = useState([]);
@@ -46,7 +47,9 @@ function LendDetails() {
           </div>
         </div>
       </div>
-      <button class="green-button">Lend money</button>
+      <button class="green-button">
+        <Link to="/pay2">Lend money</Link>
+      </button>
     </>
   );
 }
