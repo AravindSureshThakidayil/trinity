@@ -11,8 +11,7 @@ Trinity is a blockchain-based microfinance platform where users can lend and bor
 
 ## Features 
 1. Decentralised
-2. Crypto-based
-3. 
+2. Crypto-based 
 
 ## Link to product walkthrough
 [Link to UI video](https://www.youtube.com/watch?v=HdAQbMqMuPE)
