@@ -4,7 +4,7 @@
 
 ![Code ReCET BAnner](https://github.com/CODE-reCET/CodeRECET24/assets/154266304/08736571-0016-4aef-840d-94054de99db7)
 
-## Trinity
+# Trinity
 
 ## Idea
 Trinity is a blockchain-based microfinance platform where users can lend and borrow money.
