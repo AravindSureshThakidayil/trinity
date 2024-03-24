@@ -1,0 +1,13 @@
+.container>div {
+    margin: 100px;
+    border: 10pt aliceblue solid;
+    border-radius: 5%;
+    width: 30%;
+    background-color: aliceblue;
+}
+
+.container {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}

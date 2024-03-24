@@ -5,9 +5,11 @@ import { auth } from "../../../database";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+var logIn = false;
+
 function SignIn() {
-  const [isLogged, setIsLogged] = useState(false);
   const navigate = useNavigate();
+  var [isLogged, setIsLogged] = useState(false);
 
   return (
     <>
@@ -32,6 +34,7 @@ function SignIn() {
           </div>
           <button type="button" onClick={() => {
             setIsLogged(true);
+            logIn = true;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             console.log(email," ",password)
@@ -59,3 +62,4 @@ function SignIn() {
 }
 
 export default SignIn;
+export var logIn;

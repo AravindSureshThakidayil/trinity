@@ -18,6 +18,8 @@ function Pay2() {
 
   return (
     <>
+    <div className="container">
+      <div>
       <div className="heading-pay2">Trinity</div>
       <div className="inputvalues">
         <div className="subheading">Select Wallet:</div>
@@ -33,6 +35,8 @@ function Pay2() {
         <button onClick={handlePayButtonClick}>
           <Link to="/success">Pay</Link>
         </button>
+      </div>
+      </div>
       </div>
     </>
   );

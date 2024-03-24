@@ -1,10 +1,11 @@
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 function Borrow() {
   return (
     <>
       <Header />
-      <div className="headinglending">Borrowing</div>
+      <div className="headinglending">Active loans</div>
       <div className="subheadinglending">Your requests</div>
       <div className="glassbarslending">
         <div className="glassbarlending">
@@ -19,7 +20,8 @@ function Borrow() {
           </div>
           <div className="time-and-more">
             <div className="time">5 sec ago</div>
-            <div className="more">Details</div>
+            <div className="more"><Link to="/borrowDetails">Details</Link></div>
+            <div className="more"><Link to="/pay2">Pay</Link></div>
           </div>
         </div>
       </div>
